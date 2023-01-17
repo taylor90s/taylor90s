@@ -1,0 +1,12 @@
+<%- include("partials/header") %>
+<h2>Home</h2>
+<p><%= h_homeStartingContent %>
+</p>
+<% for (let i=0; i<h_postList.length; i++){ %>
+  <h2><%= h_postList[i].title%></h2>
+  <div class="postBodyContainer">
+    <p class='postContent'><%= h_postList[i].content %></p>
+    <a href="/posts/<%=h_postList[i].title%>">Read more</a>
+  </div>
+<%}%>
+<%- include("partials/footer") %>
